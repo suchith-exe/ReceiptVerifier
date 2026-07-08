@@ -1,0 +1,34 @@
+# Virtual Environment
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
+
+# Output files
+output/
+
+# OCR temp files
+temp/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data files (contains customer information)
+data/*.csv
+
+# Compiled Python
+build/
+dist/
+*.spec
