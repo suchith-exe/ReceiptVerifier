@@ -1,29 +1,10 @@
-from csv_loader import CSVLoader
+from gui.main_window import MainWindow
+from PySide6.QtWidgets import QApplication
+import sys
 
-loader = CSVLoader("data/Delivery Register Report.csv")
+app = QApplication(sys.argv)
 
-database = loader.load()
+window = MainWindow()
+window.show()
 
-print("\nReceipt Verifier Started!")
-print("Type EXIT to quit.\n")
-
-while True:
-
-    consumer = input("Consumer No : ").strip().upper()
-
-    if consumer == "EXIT":
-        break
-
-    if consumer in database:
-
-        print("\n✅ FOUND")
-
-        print("Customer :", database[consumer]["name"])
-        print("Delivery :", database[consumer]["date"])
-        print("Mobile   :", database[consumer]["mobile"])
-
-    else:
-
-        print("\n❌ NOT FOUND")
-
-    print()
+sys.exit(app.exec())
